@@ -1,0 +1,271 @@
+
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Serif+JP:wght@400;500&display=swap');
+
+/* ========================================
+   tarot-diddle
+   Design: Antique / Editorial / Minimal
+   ======================================== */
+
+/* Design tokens */
+:root {
+    --paper: #f3f1e9;
+    --ink: #292822;
+    --muted: #77736a;
+    --shadow: #e5e1d6;
+    --line: #393730;
+
+    --font-title: "IM Fell English", "Noto Serif JP", serif;
+    --font-body: "EB Garamond", "Noto Serif JP", serif;
+}
+
+/* Base */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+
+    background: var(--paper);
+    color: var(--ink);
+
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Header */
+header {
+    max-width: 560px;
+    margin: 0 auto 32px;
+    padding-bottom: 24px;
+
+    border-bottom: 3px double var(--line);
+}
+
+header::before {
+    content: "A LITTLE ORACLE FOR MUSIC";
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+}
+
+header h1 {
+    font-family: var(--font-title);
+    font-size: clamp(2.4rem, 10vw, 4rem);
+    font-weight: normal;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    margin: 12px 0;
+}
+
+header p {
+    font-size: 1rem;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Main layout */
+main {
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+/* Three-card spread */
+#spread {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin: 32px 0;
+}
+
+.slot {
+    display: flex;
+    flex-direction: column;
+}
+
+.slot::before {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 8px;
+}
+
+.slot:nth-child(1)::before {
+    content: "I.";
+}
+
+.slot:nth-child(2)::before {
+    content: "II.";
+}
+
+.slot:nth-child(3)::before {
+    content: "III.";
+}
+
+.slot h2 {
+    order: 2;
+    font-family: var(--font-title);
+    font-size: 1.1rem;
+    font-weight: normal;
+    margin: 10px 0 0;
+}
+
+/* Tarot cards */
+.card {
+    position: relative;
+    aspect-ratio: 2 / 3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: 3px double var(--line);
+    border-radius: 0;
+
+    padding: 8px;
+    font-size: 0.85rem;
+    overflow-wrap: anywhere;
+}
+
+.card.empty {
+    color: var(--muted);
+    font-style: italic;
+}
+
+.card.empty::before {
+    content: "✦";
+    color: var(--ink);
+    font-size: 2rem;
+    font-style: normal;
+    margin-bottom: 8px;
+}
+
+.card h3 {
+    font-family: var(--font-title);
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 8px 0;
+}
+
+.card p {
+    font-size: 0.8rem;
+    margin: 4px 0;
+}
+
+.card small {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+}
+
+/* Status */
+#status {
+    margin: 28px 0 20px;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+/* Buttons */
+button {
+    min-height: 44px;
+    padding: 8px 18px;
+
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--line);
+    border-radius: 0;
+
+    font: inherit;
+    cursor: pointer;
+
+    transition: background 150ms ease;
+}
+
+button:hover {
+    background: var(--shadow);
+}
+
+button:focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 3px;
+}
+
+button:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+#reset {
+    min-width: 110px;
+}
+
+/* Debug */
+#debug {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+}
+
+#debug h2 {
+    font-size: 0.75rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+}
+
+#debug-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+}
+
+#debug-buttons button {
+    font-size: 0.8rem;
+}
+
+/* Footer */
+footer {
+    max-width: 560px;
+    margin: 40px auto 0;
+    padding-top: 24px;
+
+    border-top: 3px double var(--line);
+
+    font-size: 0.75rem;
+    color: var(--muted);
+}
+
+footer::before {
+    content: "Hey diddle, diddle,\A The cat and the fiddle.";
+    display: block;
+    white-space: pre-line;
+
+    font-family: var(--font-title);
+    font-size: 1rem;
+    font-style: italic;
+    line-height: 1.6;
+
+    margin-bottom: 16px;
+}
+
+/* Small screens */
+@media (max-width: 360px) {
+    body {
+        padding: 24px 12px;
+    }
+
+    #spread {
+        gap: 6px;
+    }
+
+    .card {
+        padding: 4px;
+    }
+
+    .slot h2 {
+        font-size: 0.95rem;
+    }
+}
