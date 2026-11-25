@@ -1,0 +1,99 @@
+
+{
+    "00": {
+        "id": "00",
+        "roman": "0",
+        "name": "The Fool",
+        "ja": "愚者",
+        "concept": "偶然・自由",
+        "keywords": [
+            "randomness",
+            "freedom",
+            "exploration"
+        ]
+    },
+    "01": {
+        "id": "01",
+        "roman": "I",
+        "name": "The Magician",
+        "ja": "魔術師",
+        "concept": "構築・創造",
+        "keywords": [
+            "structure",
+            "creation",
+            "complexity"
+        ]
+    },
+    "09": {
+        "id": "09",
+        "roman": "IX",
+        "name": "The Hermit",
+        "ja": "隠者",
+        "concept": "孤独・静寂",
+        "keywords": [
+            "silence",
+            "sparsity",
+            "isolation"
+        ]
+    },
+    "10": {
+        "id": "10",
+        "roman": "X",
+        "name": "Wheel of Fortune",
+        "ja": "運命の輪",
+        "concept": "循環・反復",
+        "keywords": [
+            "cycle",
+            "repetition",
+            "variation"
+        ]
+    },
+    "13": {
+        "id": "13",
+        "roman": "XIII",
+        "name": "Death",
+        "ja": "死神",
+        "concept": "消失・変容",
+        "keywords": [
+            "decay",
+            "transformation",
+            "renewal"
+        ]
+    },
+    "14": {
+        "id": "14",
+        "roman": "XIV",
+        "name": "Temperance",
+        "ja": "節制",
+        "concept": "混合・調和",
+        "keywords": [
+            "balance",
+            "blend",
+            "consonance"
+        ]
+    },
+    "16": {
+        "id": "16",
+        "roman": "XVI",
+        "name": "The Tower",
+        "ja": "塔",
+        "concept": "崩壊・衝撃",
+        "keywords": [
+            "disruption",
+            "impact",
+            "discontinuity"
+        ]
+    },
+    "18": {
+        "id": "18",
+        "roman": "XVIII",
+        "name": "The Moon",
+        "ja": "月",
+        "concept": "曖昧・揺らぎ",
+        "keywords": [
+            "ambiguity",
+            "instability",
+            "modulation"
+        ]
+    }
+}
