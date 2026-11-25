@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>tarot-diddle</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <h1>tarot-diddle</h1>
+        <p>Draw cards. Get sounds. Make music.</p>
+    </header>
+
+    <main>
+        <!-- Three-card spread -->
+        <section id="spread">
+
+            <div class="slot">
+                <h2>Rhythm</h2>
+                <div class="card" id="slot-0">
+                    Waiting...
+                </div>
+            </div>
+
+            <div class="slot">
+                <h2>Melody</h2>
+                <div class="card" id="slot-1">
+                    Waiting...
+                </div>
+            </div>
+
+            <div class="slot">
+                <h2>Harmony</h2>
+                <div class="card" id="slot-2">
+                    Waiting...
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Status -->
+        <p id="status" aria-live="polite">
+            Draw your first card.
+        </p>
+
+        <!-- Controls -->
+        <section id="controls">
+            <button id="reset">Reset</button>
+        </section>
+
+        <!-- Debug -->
+        <section id="debug">
+            <h2>Debug</h2>
+            <div id="debug-buttons"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>tarot-diddle / Prototype 0.1</p>
+    </footer>
+</body>
+</html>
